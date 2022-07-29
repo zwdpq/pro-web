@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="pro11-qqzone1.0:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/pro11_qqzone1_0_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="pro11-qqzone1.0" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib_thymeleaf" />
+          <element id="file-copy" path="E:/java/java/java Web/shangguigu/javaWeb/2022 new version/00.sql and jar/01.jar/mysql-connector-java-5.1.45-bin.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="pro11-qqzone1.0/web/Web" />
+    </root>
+  </artifact>
+</component>

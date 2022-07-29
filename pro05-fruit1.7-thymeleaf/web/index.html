@@ -1,0 +1,48 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/index.css">
+		<script type="text/javascript" language="JavaScript" src="js/index.js"></script>
+	</head>
+	<body>
+		<div id="div_container">
+			<div id="div_fruit_list">
+				<p class="systitle">库存商品清单显示系统</p>
+				<div id="div_serach">
+				</div>
+				<div id="div_a0">
+					<form th:action="@{/index}" method="post" class="form_serach">
+						<input type="hidden" name="oper" value="serach">
+						请输入关键字:<input type="text" name="keyword" th:value="${session.keyword}">
+						<input type="submit" value="搜索">
+					</form>
+					<a class="a0" th:href="@{/add.html}">新增水果信息</a>
+				</div>
+				<table id="tbl_fruit">
+					<tr>
+						<th class="w20">名称</th>
+						<th class="w20">单价</th>
+						<th class="w20">库存</th>
+						<th>操作</th>
+					</tr>
+					<tr th:if="${#lists.isEmpty(session.fruits)}">
+						<td colspan="4">库存商品数量为空</td>
+					</tr>
+					<tr th:unless="${#lists.isEmpty(session.fruits)}" th:each="fruit : ${session.fruits}">
+						<td><a th:text="${fruit.fname}" th:href="@{'/edit.do?fid=' + ${fruit.fid}}"></a></td>
+						<!--<td><a th:text="${fruit.fname}" th:href="@{/edit.do(fid=${fruit.fid})}">苹果</a></td>-->
+						<td th:text="${fruit.price}">5</td>
+						<td th:text="${fruit.fcount}">20</td>
+						<td><img src="imgs/del.jpg" class="delImg" th:onclick="'delFruit('+ ${fruit.fid} +')'"/></td>
+					</tr>
+				</table>
+				<div id="div_tbl_button">
+					<input type="button" value="首  页" th:onclick="page(1)">
+					<input type="button" value="上一页" th:onclick="|page(${session.pageNo - 1})|">
+					<input type="button" value="下一页" th:onclick="|page(${session.pageNo + 1})|">
+					<input type="button" value="尾  页" th:onclick="|page(${session.pageTotalNo})|">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

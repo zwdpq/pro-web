@@ -1,0 +1,3 @@
+applicationContetx.xml中主要是说明每个Controller类
+我们通过读取applicationContetx.xml文件来将每个Controller对象放到Map容器中，方便以后的调用
+通过读取请求url中的ControllerName与operate来获取想要执行的是哪个Controller对象的哪个方法，之后通过反射调用对应的方法

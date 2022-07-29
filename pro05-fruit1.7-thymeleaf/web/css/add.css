@@ -1,0 +1,37 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: grey;
+}
+div{
+    position: relative;
+    float: left;
+}
+#div_container{
+    border-radius:8px;
+    background-color: #ceffff;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+}
+#div_fruit{
+    width: 100%;
+
+}
+.table_title{
+    margin-top: 10%;
+    font-family: "黑体";
+    font-size: 30px;
+    margin-left: 10%;
+    text-align: center;
+}
+.table_fruit{
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+}
+.table_fruit,.table_fruit tr,.table_fruit th,.table_fruit td{
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 4px;
+}
