@@ -12,4 +12,6 @@ public interface TopicDao {
     Integer addTopic(Topic topic);
     //删除日志
     Integer deleteTopic(Topic topic);
+    //根据日志id获取日志信息
+    Topic getTopicById(Integer id);
 }

@@ -1,7 +1,7 @@
-package com.atguigu.qqzone.dao;
+package com.atguigu.qqzone.service;
 
 import com.atguigu.qqzone.pojo.HostReply;
 
-public interface HostReplyDao {
+public interface HostReplyService {
     HostReply getHostReplyByReplyId(Integer id);
 }

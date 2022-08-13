@@ -1,6 +1,6 @@
 package com.atguigu.qqzone.pojo;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class HostReply {
     private Integer id;
@@ -10,6 +10,10 @@ public class HostReply {
     private Reply reply;
 
     public HostReply() {
+    }
+
+    public HostReply(Integer id) {
+        this.id = id;
     }
 
     public Integer getId() {

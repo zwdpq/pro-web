@@ -1,6 +1,6 @@
 package com.atguigu.qqzone.pojo;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class UserDetail {
     private Integer id;

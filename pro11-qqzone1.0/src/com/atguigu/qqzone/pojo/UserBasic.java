@@ -10,9 +10,9 @@ public class UserBasic {
     private String headImg;
 
     //实体类的关系
-    private List<Topic> topics; // 1:N
+    private List<Topic> topicList; // 1:N
     private UserDetail userDetail; // 1:1
-    private List<UserBasic> friends; // N:M
+    private List<UserBasic> friendList; // N:M
 
     public UserBasic() {
     }
@@ -61,14 +61,6 @@ public class UserBasic {
         this.headImg = headImg;
     }
 
-    public List<Topic> getTopics() {
-        return topics;
-    }
-
-    public void setTopics(List<Topic> topics) {
-        this.topics = topics;
-    }
-
     public UserDetail getUserDetail() {
         return userDetail;
     }
@@ -77,11 +69,19 @@ public class UserBasic {
         this.userDetail = userDetail;
     }
 
-    public List<UserBasic> getFriends() {
-        return friends;
+    public List<Topic> getTopicList() {
+        return topicList;
     }
 
-    public void setFriends(List<UserBasic> friends) {
-        this.friends = friends;
+    public void setTopicList(List<Topic> topicList) {
+        this.topicList = topicList;
+    }
+
+    public List<UserBasic> getFriendList() {
+        return friendList;
+    }
+
+    public void setFriendList(List<UserBasic> friendList) {
+        this.friendList = friendList;
     }
 }

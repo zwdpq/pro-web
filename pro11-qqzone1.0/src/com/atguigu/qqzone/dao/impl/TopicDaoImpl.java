@@ -22,4 +22,9 @@ public class TopicDaoImpl extends BaseDAO<Topic> implements TopicDao {
     public Integer deleteTopic(Topic topic) {
         return null;
     }
+
+    @Override
+    public Topic getTopicById(Integer id) {
+        return super.load("select * from t_topic where id = ?", id);
+    }
 }

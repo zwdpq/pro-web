@@ -17,8 +17,8 @@ public class UserController {
         if (userBasic != null){
             List<UserBasic> friendList = userBasicService.getFriendList(userBasic);
             List<Topic> topicList = topicService.getTopicList(userBasic);
-            userBasic.setFriends(friendList);
-            userBasic.setTopics(topicList);
+            userBasic.setFriendList(friendList);
+            userBasic.setTopicList(topicList);
             session.setAttribute("userBasic",userBasic);
             session.setAttribute("friend",userBasic);
             return "index";

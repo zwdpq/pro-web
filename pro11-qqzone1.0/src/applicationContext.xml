@@ -14,16 +14,31 @@
 <beans>
     <bean id="userBasicDao" class="com.atguigu.qqzone.dao.impl.UserBasicDaoImpl"></bean>
     <bean id="topicDao" class="com.atguigu.qqzone.dao.impl.TopicDaoImpl"></bean>
+    <bean id="replyDao" class="com.atguigu.qqzone.dao.impl.ReplyDaoImpl"></bean>
+    <bean id="hostReplyDao" class="com.atguigu.qqzone.dao.impl.HostReplyDaoImpl"></bean>
     
     <bean id="userBasicService" class="com.atguigu.qqzone.service.impl.UserBasicServiceImpl">
         <property name="userBasicDao" ref="userBasicDao"></property>
     </bean>
     <bean id="topicService" class="com.atguigu.qqzone.service.impl.TopicServiceImpl">
         <property name="topicDao" ref="topicDao"></property>
+        <property name="replyService" ref="replyService"></property>
     </bean>
+    <bean id="replyService" class="com.atguigu.qqzone.service.impl.ReplyServiceImpl">
+        <property name="replyDao" ref="replyDao"></property>
+        <property name="hostReplyService" ref="hostReplyService"></property>
+    </bean>
+    <bean id="hostReplyService" class="com.atguigu.qqzone.service.impl.HostReplyServiceImpl">
+        <property name="hostReplyDao" ref="hostReplyDao"></property>
+    </bean>
+
     <bean id="user" class="com.atguigu.qqzone.controller.UserController">
         <property name="userBasicService" ref="userBasicService"></property>
         <property name="topicService" ref="topicService"></property>
     </bean>
     <bean id="page" class="com.atguigu.myssm.myspringmvc.PageController"></bean>
+
+    <bean id="topic" class="com.atguigu.qqzone.controller.TopicController">
+        <property name="topicService" ref="topicService"></property>
+    </bean>
 </beans>
