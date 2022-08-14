@@ -24,6 +24,15 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
+          <root url="jar://E:/java/java/java Web/shangguigu/javaWeb/2022 new version/00.sql and jar/01.jar/druid-1.1.10.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
           <root url="jar://E:/java/java/java Web/shangguigu/javaWeb/2022 new version/00.sql and jar/01.jar/mysql-connector-java-5.1.45-bin.jar!/" />
         </CLASSES>
         <JAVADOC />
