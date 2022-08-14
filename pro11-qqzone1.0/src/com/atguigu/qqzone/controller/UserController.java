@@ -32,10 +32,16 @@ public class UserController {
      * @param id
      * @return
      */
-    public String friend(String id){
+    public String friend(Integer id, HttpSession session){
         //好友的信息
-
+        UserBasic currentFriend = userBasicService.getUserBasicById(id);
+        List<UserBasic> friendList = userBasicService.getFriendList(currentFriend);
+        currentFriend.setFriendList(friendList);
         //好友的日志信息
-        return null;
+        List<Topic> topicList = topicService.getTopicList(currentFriend);
+        currentFriend.setTopicList(topicList);
+        session.setAttribute("friend", currentFriend);
+
+        return "index";
     }
 }

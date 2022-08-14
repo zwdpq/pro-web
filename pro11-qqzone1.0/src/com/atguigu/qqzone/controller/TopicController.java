@@ -1,10 +1,11 @@
 package com.atguigu.qqzone.controller;
 
-
 import com.atguigu.qqzone.pojo.Topic;
+import com.atguigu.qqzone.pojo.UserBasic;
 import com.atguigu.qqzone.service.TopicService;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 public class TopicController {
     private TopicService topicService = null;
@@ -14,6 +15,20 @@ public class TopicController {
 
         session.setAttribute("topic",topic);
 
-        return "/frames/detail";
+        return "frames/detail";
+    }
+
+    public String delTopic(Integer topicId, HttpSession session){
+        topicService.delTopic(topicId);
+        return "redirect:topic.do?operate=getTopicList" ;
+    }
+
+    public String getTopicList(HttpSession session){
+        UserBasic userBasic = (UserBasic) session.getAttribute("userBasic");
+        List<Topic> topicList = topicService.getTopicList(userBasic);
+        userBasic.setTopicList(topicList);
+        session.setAttribute("friend",userBasic);
+
+        return "frames/main";
     }
 }

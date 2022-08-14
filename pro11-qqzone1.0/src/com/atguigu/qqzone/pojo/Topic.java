@@ -10,7 +10,7 @@ public class Topic {
     private Date topicDate;
     private UserBasic author;
 
-    private List<Reply> replys; //1:N
+    private List<Reply> replyList; //1:N
 
     public Topic() {
     }
@@ -59,11 +59,11 @@ public class Topic {
         this.author = author;
     }
 
-    public List<Reply> getReplys() {
-        return replys;
+    public List<Reply> getReplyList() {
+        return replyList;
     }
 
-    public void setReplys(List<Reply> replys) {
-        this.replys = replys;
+    public void setReplyList(List<Reply> replyList) {
+        this.replyList = replyList;
     }
 }

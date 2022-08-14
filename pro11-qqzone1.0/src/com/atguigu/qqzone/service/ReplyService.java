@@ -6,4 +6,8 @@ import java.util.List;
 
 public interface ReplyService {
     List<Reply> getReplyByTopicId(Integer id);
+
+    Integer addReply(Reply reply);
+
+    void deleteReply(Integer id);
 }

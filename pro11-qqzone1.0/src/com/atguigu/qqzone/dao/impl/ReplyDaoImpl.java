@@ -15,11 +15,11 @@ public class ReplyDaoImpl extends BaseDAO<Reply> implements ReplyDao {
 
     @Override
     public Integer addReply(Reply reply) {
-        return null;
+        return super.executeUpdate("insert into t_reply values (0,?,?,?,?)", reply.getContent(), reply.getReplyDate(), reply.getAuthor().getId(), reply.getTopic().getId());
     }
 
     @Override
     public Integer deleteReply(Reply reply) {
-        return null;
+        return super.executeUpdate("delete from t_reply where id = ?", reply.getId());
     }
 }

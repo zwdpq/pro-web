@@ -9,4 +9,9 @@ public class HostReplyDaoImpl extends BaseDAO<HostReply> implements HostReplyDao
     public HostReply getHostReplyByReplyId(Integer id) {
         return super.load("select * from t_host_reply where reply = ?", id);
     }
+
+    @Override
+    public Integer deleteHostReply(HostReply hostReply) {
+        return super.executeUpdate("delete from t_host_reply where id = ?", hostReply.getId());
+    }
 }

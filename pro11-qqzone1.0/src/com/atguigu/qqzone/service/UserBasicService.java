@@ -9,5 +9,5 @@ public interface UserBasicService {
 
     List<UserBasic> getFriendList(UserBasic userBasic);
 
-    List getUserBasicById(String id);
+    UserBasic getUserBasicById(Integer id);
 }

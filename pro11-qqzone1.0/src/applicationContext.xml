@@ -27,6 +27,7 @@
     <bean id="replyService" class="com.atguigu.qqzone.service.impl.ReplyServiceImpl">
         <property name="replyDao" ref="replyDao"></property>
         <property name="hostReplyService" ref="hostReplyService"></property>
+        <property name="userBasicService" ref="userBasicService"></property>
     </bean>
     <bean id="hostReplyService" class="com.atguigu.qqzone.service.impl.HostReplyServiceImpl">
         <property name="hostReplyDao" ref="hostReplyDao"></property>
@@ -40,5 +41,9 @@
 
     <bean id="topic" class="com.atguigu.qqzone.controller.TopicController">
         <property name="topicService" ref="topicService"></property>
+    </bean>
+
+    <bean id="reply" class="com.atguigu.qqzone.controller.ReplyController">
+        <property name="replyService" ref="replyService"></property>
     </bean>
 </beans>

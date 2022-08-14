@@ -27,8 +27,8 @@ public class UserBasicServiceImpl implements UserBasicService {
     }
 
     @Override
-    public List getUserBasicById(String id) {
-        return null;
+    public UserBasic getUserBasicById(Integer id) {
+        return userBasicDao.getUserBasicById(id);
     }
 
 
