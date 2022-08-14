@@ -9,6 +9,8 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="lib_thymeleaf" />
           <element id="file-copy" path="E:/java/java/java Web/shangguigu/javaWeb/2022 new version/00.sql and jar/01.jar/mysql-connector-java-5.1.45-bin.jar" />
+          <element id="file-copy" path="E:/java/java/java Web/shangguigu/javaWeb/2022 new version/00.sql and jar/01.jar/druid-1.1.10.jar" />
+          <element id="library" level="project" name="lib_myssm" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="pro11-qqzone1.0/web/Web" />
